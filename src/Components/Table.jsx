@@ -33,8 +33,9 @@ const Table = () => {
   };
   return (
     <>
+    <div className="container col-4">
       <h1>Table</h1>
-      <table style={{ border: "2px" }} className="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">1</th>
@@ -67,9 +68,9 @@ const Table = () => {
                               setHover({ status: true, value: fieldData.label })
                             }
                             style={
-                              hover.status && hover.value == fieldData.label
+                              hover.status && hover.value === fieldData.label
                                 ? { backgroundColor: "blue" }
-                                : { backgroundColor: "white" }
+                                : { backgroundColor: "#ffebcc" }
                             }
                           >
                             {doubleClick.status &&
@@ -96,9 +97,9 @@ const Table = () => {
                           {fieldData.hint ? (
                             <td
                               style={
-                                hover.status && hover.value == fieldData.label
+                                hover.status && hover.value === fieldData.label
                                   ? { backgroundColor: "blue" }
-                                  : { backgroundColor: "white" }
+                                  : { backgroundColor: "#ffebcc" }
                               }
                               onMouseLeave={() =>
                                 setHover({
@@ -134,9 +135,9 @@ const Table = () => {
                           {fieldData.hint ? (
                             <td
                               style={
-                                hover.status && hover.value == fieldData.label
+                                hover.status && hover.value === fieldData.label
                                   ? { backgroundColor: "blue" }
-                                  : { backgroundColor: "white" }
+                                  : { backgroundColor: "#ffebcc" }
                               }
                               onMouseLeave={() =>
                                 setHover({
@@ -167,6 +168,7 @@ const Table = () => {
           })}
         </tbody>
       </table>
+      </div>
     </>
   );
 };
